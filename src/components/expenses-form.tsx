@@ -1,6 +1,11 @@
+import { addExpense } from "@/actions/actions";
+
 export default function ExpensesForm() {
   return (
-    <form className="w-full mt-8 rounded overflow-hidden">
+    <form
+      action={addExpense}
+      className="w-full mt-8 rounded overflow-hidden bg-white"
+    >
       <input
         type="text"
         name="description"
@@ -15,7 +20,7 @@ export default function ExpensesForm() {
       />
       <button
         type="submit"
-        className="w-full bg-blue-100 text-white px-2 py-2 font-bold"
+        className="w-full bg-blue-500 text-white px-2 py-2 font-bold"
       >
         Add Expense
       </button>
