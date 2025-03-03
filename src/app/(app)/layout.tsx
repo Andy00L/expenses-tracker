@@ -1,5 +1,5 @@
+import AppHeader from "@/components/header/app-header";
 import BackgroundPattern from "@/components/background-pattern";
-import AppHeader from "@/components/app-header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

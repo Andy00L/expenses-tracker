@@ -1,5 +1,5 @@
 "use client";
-import { deleteExpense } from "@/actions/actions";
+import { deleteExpense } from "@/actions/server-side-actions";
 
 export default function dashboardSubButton({ expense }: { expense: number }) {
   return (

@@ -1,4 +1,4 @@
-import { addExpense } from "@/actions/actions";
+import { addExpense } from "@/actions/server-side-actions";
 
 export default function ExpensesForm() {
   return (

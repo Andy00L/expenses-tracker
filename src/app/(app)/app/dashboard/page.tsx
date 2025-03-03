@@ -4,6 +4,7 @@ import { prisma } from "@/lib/db";
 
 export default async function Page() {
   const expenses = await prisma.expense.findMany();
+  // authentification check
 
   return (
     <div>
