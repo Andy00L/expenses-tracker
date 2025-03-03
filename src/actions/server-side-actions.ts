@@ -1,13 +1,16 @@
 "use server";
-
 import { prisma } from "@/lib/db";
 import { revalidatePath } from "next/cache";
-
+import { auth } from "@clerk/nextjs/server";
 export async function addExpense(formData: FormData) {
+  const authData = await auth();
+  const userId = authData.userId;
+
   await prisma.expense.create({
     data: {
       amount: Number(formData.get("amount")),
       description: formData.get("description") as string,
+      creatorId: userId as string,
     },
   });
   revalidatePath("/app/dashboard");
@@ -29,4 +32,10 @@ export async function editExpense(formData: FormData) {
     },
   });
   revalidatePath("/app/dashboard");
+}
+
+export async function getUserId() {
+  const authData = await auth();
+  const userId = authData.userId;
+  return userId;
 }

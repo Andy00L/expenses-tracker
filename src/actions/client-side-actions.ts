@@ -7,3 +7,8 @@ export function GetUserEmail() {
   const email = user?.emailAddresses[0].emailAddress;
   return email;
 }
+export function GetUserImage() {
+  const { user } = useUser();
+  const image = user?.imageUrl;
+  return image;
+}

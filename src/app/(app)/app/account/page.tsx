@@ -1,5 +1,4 @@
 import { GetUserEmail } from "@/actions/client-side-actions";
-
 export default function Page() {
   return (
     <div className="text-center">

@@ -1,10 +1,15 @@
+import { getUserId } from "@/actions/server-side-actions";
 import ExpensesForm from "@/components/expenses-form";
 import ExpensesList from "@/components/expenses-list";
 import { prisma } from "@/lib/db";
 
 export default async function Page() {
-  const expenses = await prisma.expense.findMany();
-  // authentification check
+  const userId = await getUserId();
+  const expenses = await prisma.expense.findMany({
+    where: {
+      creatorId: userId as string,
+    },
+  });
 
   return (
     <div>
