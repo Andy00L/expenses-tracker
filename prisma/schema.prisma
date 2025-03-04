@@ -17,3 +17,11 @@ model Expense {
   creatorId String
   date      DateTime @default(now())
 }
+
+model Subscription {
+  id        Int      @id @default(autoincrement())
+  userId    String
+  status    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

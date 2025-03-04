@@ -1,7 +1,15 @@
 "use server";
 import { prisma } from "@/lib/db";
+import { auth, currentUser } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
-import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
+import Stripe from "stripe";
+
+async function serverSideEmail() {
+  const user = await currentUser();
+  return user?.emailAddresses[0].emailAddress;
+}
+
 export async function addExpense(formData: FormData) {
   const authData = await auth();
   const userId = authData.userId;
@@ -38,4 +46,27 @@ export async function getUserId() {
   const authData = await auth();
   const userId = authData.userId;
   return userId;
+}
+
+export async function createCheckoutSession() {
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
+    apiVersion: "2025-02-24.acacia",
+  });
+
+  const userEmail = await serverSideEmail();
+  const userId = await getUserId();
+  const session = await stripe.checkout.sessions.create({
+    customer_email: userEmail as string,
+    client_reference_id: userId as string,
+    line_items: [
+      {
+        price: "price_1Qyr0HCEq45hckvnjIY773BA",
+        quantity: 1,
+      },
+    ],
+    mode: "payment",
+    success_url: `http://localhost:3000/app/dashboard`,
+    cancel_url: `http://localhost:3000/app/account`,
+  });
+  redirect(session.url as string);
 }
