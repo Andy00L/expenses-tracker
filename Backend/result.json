@@ -1,0 +1,33 @@
+[
+  {
+    "cardName": "American Express Cobalt Card",
+    "issuer": "American Express Canada",
+    "annualFee": "155.88$",
+    "interestRate": {
+      "purchaseRate": "20.99%"
+    },
+    "rewardsProgram": {
+      "program": "Membership Rewards",
+      "earnRates": {
+        "regularSpending": "1 point par $1"
+      },
+      "redemptionOptions": [
+        "Voyages",
+        "Crédits sur relevé",
+        "Cartes-cadeaux"
+      ]
+    },
+    "mainBenefits": [
+      "Jusqu’à 5X les points sur la restauration au Canada",
+      "Assurance voyage et protections variées",
+      "Options de rédemption flexibles avec Membership Rewards"
+    ],
+    "creditScoreRecommendation": "Bon ou excellent",
+    "welcomeOffer": {
+      "bonusPoints": 30000,
+      "description": "Obtenez jusqu'à 30 000 points Membership Rewards la première année (2 500 points chaque mois en dépensant 500$)."
+    },
+    "foreignTransactionFee": "2.5%",
+    "officialWebsite": "https://www.americanexpress.com/ca/fr/cartes-de-credit/cobalt-card/"
+  }
+]

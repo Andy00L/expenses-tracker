@@ -13,6 +13,7 @@
     "@kinde-oss/kinde-auth-nextjs": "^2.5.3",
     "@prisma/client": "^6.4.1",
     "next": "15.2.0",
+    "openai": "^4.86.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "stripe": "^17.7.0"
