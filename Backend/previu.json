@@ -1,33 +1,32 @@
 {
-  "cardName": "American Express Cobalt Card",
-  "issuer": "American Express Canada",
-  "annualFee": "155.88$",
+  "cardName": "RBC ION+ Visa",
+  "issuer": "Royal Bank of Canada",
+  "annualFee": "48$",
   "interestRate": {
-    "purchaseRate": "21.99%"
+    "purchaseRate": "20.99%"
   },
   "welcomeOffer": {
-    "bonusPoints": 15000,
-    "description": "Earn 1,250 Membership Rewards points for each monthly billing period in which you spend $750 in the first year"
+    "bonusPoints": 14000,
+    "description": "Get 14,000 Avion points upon approval"
   },
   "rewardsProgram": {
-    "program": "American Express Membership Rewards",
+    "program": "RBC ION Avion",
     "earnRates": {
-      "regularSpending": "1 point per $1"
+      "regularSpending": "3 points per $1 on select categories, 1 point per $1 on all other purchases"
     },
     "redemptionOptions": [
-      "Travel bookings",
-      "Statement credits",
-      "Gift cards"
+      "Travel",
+      "Gift cards",
+      "Merchandise"
     ]
   },
   "mainBenefits": [
-    "5x points on eligible eats and drinks in Canada",
-    "3x points on eligible streaming subscriptions in Canada",
-    "2x points on eligible travel and transit purchases",
-    "Travel insurance coverage",
-    "Access to American Express Experiences"
+    "Mobile Device Insurance",
+    "Purchase Security",
+    "Extended Warranty Insurance",
+    "Petro-Canada savings"
   ],
-  "creditScoreRecommendation": "Good or Excellent",
+  "creditScoreRecommendation": "Good",
   "foreignTransactionFee": "2.5%",
-  "officialWebsite": "https://www.americanexpress.com/en-ca/credit-cards/cobalt-card/"
+  "officialWebsite": "https://www.rbcroyalbank.com/credit-cards/rewards/rbc-ion-plus-visa.html"
 }
