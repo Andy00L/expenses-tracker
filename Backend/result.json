@@ -1,34 +1,32 @@
 [
   {
-    "cardName": "RBC ION+ Visa",
-    "issuer": "Royal Bank of Canada",
-    "annualFee": "48$",
+    "cardName": "BMO CashBack Mastercard for Students",
+    "issuer": "Bank of Montreal",
+    "annualFee": "Free",
     "interestRate": {
       "purchaseRate": "20.99%"
     },
     "rewardsProgram": {
-      "program": "RBC ION Avion",
+      "program": "BMO CashBack",
       "earnRates": {
-        "regularSpending": "3 points per $1 on select categories, 1 point per $1 on all other purchases"
+        "regularSpending": "1% on all purchases"
       },
       "redemptionOptions": [
-        "Travel",
-        "Gift cards",
-        "Merchandise"
+        "Statement credit",
+        "Deposit to BMO chequing or savings account"
       ]
     },
     "mainBenefits": [
-      "Mobile Device Insurance",
-      "Purchase Security",
-      "Extended Warranty Insurance",
-      "Petro-Canada savings"
+      "No minimum income requirement",
+      "Extended warranty",
+      "Purchase protection"
     ],
-    "creditScoreRecommendation": "Good",
+    "creditScoreRecommendation": "Fair to Good",
     "welcomeOffer": {
-      "bonusPoints": 14000,
-      "description": "Get 14,000 Avion points upon approval"
+      "bonusPoints": null,
+      "description": "5% cash back in your first 3 months"
     },
     "foreignTransactionFee": "2.5%",
-    "officialWebsite": "https://www.rbcroyalbank.com/credit-cards/rewards/rbc-ion-plus-visa.html"
+    "officialWebsite": "https://www.bmo.com/main/personal/credit-cards/students/bmo-cashback-mastercard-for-students/"
   }
 ]

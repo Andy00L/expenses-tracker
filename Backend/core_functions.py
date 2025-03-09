@@ -1,6 +1,7 @@
 import os
 import sys
 import argparse
+import argparse  
 from termcolor import colored
 from pydantic import BaseModel, ValidationError, Field
 from openai import OpenAI, APIConnectionError, APIError, AuthenticationError, RateLimitError, OpenAIError
@@ -112,7 +113,7 @@ def handle_api_errors(e: Exception, api_type: str, response_text=""):
     # Incohérence de type (ex: str au lieu de int)
     elif isinstance(e, TypeError):
         print_colored("❗ ERREUR DE TYPE : Données non sérialisables", **MSG_COLOR["error"])
-        print_colored(f"Détails : {str(e)}", "yellow")
+        print_colored(f"Détails : {str(e)}", color="yellow")
     # Valeur invalide (ex: champ requis manquant)
     elif isinstance(e, ValueError):
         print_colored(f"❗ ERREUR DE TYPE/VALEUR : {str(e)}", **MSG_COLOR["error"])
@@ -234,11 +235,11 @@ def client_creation(selected_api,openai_key,perplexity_key):
             openai_key=openai_key or os.getenv("OPENAI_API_KEY"),
             perplexity_key=perplexity_key or os.getenv("PERPLEXITY_API_KEY")
         )
+        return client
     except Exception as e:
         print_colored(f"Impossible de créer le client : {str(e)}", **MSG_COLOR["error"])
-        sys.exit(1)
-    return client
-
+        raise  
+    
 def execute_chat_completion(client, selected_api: str, selected_model: str, messages: list) -> tuple[bool, Optional[object]]:
     """Exécute une requête de complétion chat en fonction de l'API choisie et gère les erreurs
     
@@ -315,7 +316,7 @@ def process_api_response_and_validate(
     completion: object, 
     selected_api: str, 
     response_text: str
-) -> bool:
+)  -> bool:
     """Traite la réponse API, valide les données et sauvegarde les résultats
     
     Args:
@@ -348,7 +349,7 @@ def process_api_response_and_validate(
         return True
     except Exception as e:
         handle_api_errors(e, selected_api, response_text)
-        return False
+        return False  # Return tuple
 
 
 # Implemtation de la logic    

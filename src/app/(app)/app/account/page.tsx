@@ -1,4 +1,5 @@
 import { GetUserEmail } from "@/actions/client-side-actions";
+import CreditCardFetcher from "@/components/credit-card";
 import SubscriptionBtn from "@/components/subscription-btn";
 export default function Page() {
   return (
@@ -25,6 +26,7 @@ export default function Page() {
         </ol>
         <SubscriptionBtn />
       </div>
+      <CreditCardFetcher />
     </div>
   );
 }
