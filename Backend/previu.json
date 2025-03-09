@@ -3,38 +3,31 @@
   "issuer": "American Express Canada",
   "annualFee": "155.88$",
   "interestRate": {
-    "purchaseRate": "20.99%"
+    "purchaseRate": "21.99%"
   },
   "welcomeOffer": {
-    "bonusPoints": 30000,
-    "description": "Obtenez jusqu'à 30 000 points Membership Rewards la première année (2 500 points chaque mois en dépensant 500$).",
-    "program": "Membership Rewards",
-    "earnRates": {
-      "regularSpending": "null"
-    },
-    "redemptionOptions": [
-      "null"
-    ]
+    "bonusPoints": 15000,
+    "description": "Earn 1,250 Membership Rewards points for each monthly billing period in which you spend $750 in the first year"
   },
   "rewardsProgram": {
-    "bonusPoints": null,
-    "description": "Gagnez 5 points par dollar sur les achats de repas et boissons au Canada, 3 points sur les abonnements de streaming, 2 points sur les voyages et 1 point sur tous les autres achats.",
-    "program": "Membership Rewards",
+    "program": "American Express Membership Rewards",
     "earnRates": {
-      "regularSpending": "1 point par $1"
+      "regularSpending": "1 point per $1"
     },
     "redemptionOptions": [
-      "Voyages",
-      "Crédits sur relevé",
-      "Cartes-cadeaux"
+      "Travel bookings",
+      "Statement credits",
+      "Gift cards"
     ]
   },
   "mainBenefits": [
-    "Jusqu’à 5X les points sur la restauration au Canada",
-    "Assurance voyage et protections variées",
-    "Options de rédemption flexibles avec Membership Rewards"
+    "5x points on eligible eats and drinks in Canada",
+    "3x points on eligible streaming subscriptions in Canada",
+    "2x points on eligible travel and transit purchases",
+    "Travel insurance coverage",
+    "Access to American Express Experiences"
   ],
-  "creditScoreRecommendation": "Bon ou excellent",
+  "creditScoreRecommendation": "Good or Excellent",
   "foreignTransactionFee": "2.5%",
-  "officialWebsite": "https://www.americanexpress.com/ca/fr/cartes-de-credit/cobalt-card/"
+  "officialWebsite": "https://www.americanexpress.com/en-ca/credit-cards/cobalt-card/"
 }
