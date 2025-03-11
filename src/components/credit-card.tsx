@@ -2,17 +2,24 @@
 "use client";
 import { useState } from "react";
 
+interface WelcomeOfferData {
+  bonusPoints?: number;
+  description?: string;
+}
+
 interface CreditCardData {
   cardName: string;
   issuer: string;
   annualFee: string;
   interestRate?: {
-    purchaseRate: string;
+    purchaseRate?: string;
+    cashAdvanceRate?: string;
+    balanceTransferRate?: string;
   };
   rewardsProgram?: {
-    program: string;
+    program?: string;
     earnRates?: {
-      regularSpending: string;
+      regularSpending?: string;
     };
     redemptionOptions?: string[];
   };
@@ -20,8 +27,8 @@ interface CreditCardData {
   creditScoreRecommendation?: string;
   foreignTransactionFee?: string;
   officialWebsite?: string;
+  welcomeOffer?: WelcomeOfferData;
 }
-
 export default function CreditCardFetcher() {
   const [cardData, setCardData] = useState<CreditCardData | null>(null);
   const [loading, setLoading] = useState(false);
@@ -32,7 +39,12 @@ export default function CreditCardFetcher() {
 
   const models = {
     openai: ["gpt-3.5-turbo", "gpt-4"],
-    perplexity: ["sonar-pro", "sonar", "sonar-reasoning-pro"],
+    perplexity: [
+      "sonar-pro",
+      "sonar",
+      "sonar-reasoning-pro",
+      "sonar-deep-research",
+    ],
   };
 
   const fetchCardData = async (e: React.FormEvent) => {
@@ -165,44 +177,92 @@ export default function CreditCardFetcher() {
             />
           </div>
 
-          {cardData.interestRate?.purchaseRate && (
-            <Section title="Interest Rates">
-              <p>Purchase Rate: {cardData.interestRate.purchaseRate}</p>
-            </Section>
-          )}
+          {/* Welcome Offer Section */}
+          {cardData.welcomeOffer &&
+            (cardData.welcomeOffer.bonusPoints ||
+              cardData.welcomeOffer.description) && (
+              <Section title="Welcome Offer">
+                {cardData.welcomeOffer.bonusPoints && (
+                  <InfoBlock
+                    title="Bonus Points"
+                    value={cardData.welcomeOffer.bonusPoints.toString()}
+                  />
+                )}
+                {cardData.welcomeOffer.description && (
+                  <InfoBlock
+                    title="Offer Description"
+                    value={cardData.welcomeOffer.description}
+                  />
+                )}
+              </Section>
+            )}
 
-          {cardData.rewardsProgram && (
-            <Section title="Rewards Program">
-              <InfoBlock
-                title="Program"
-                value={cardData.rewardsProgram.program}
-              />
-              {cardData.rewardsProgram.earnRates?.regularSpending && (
-                <InfoBlock
-                  title="Earn Rate"
-                  value={cardData.rewardsProgram.earnRates.regularSpending}
-                />
-              )}
-              {cardData.rewardsProgram.redemptionOptions && (
-                <div>
-                  <h4 className="text-sm font-medium text-gray-600">
-                    Redemption Options:
-                  </h4>
-                  <ul className="list-disc pl-5">
-                    {cardData.rewardsProgram.redemptionOptions.map(
-                      (option, index) => (
-                        <li key={index} className="text-gray-700">
-                          {option}
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </div>
-              )}
-            </Section>
-          )}
+          {/* Interest Rates Section */}
+          {cardData.interestRate &&
+            (cardData.interestRate.purchaseRate ||
+              cardData.interestRate.cashAdvanceRate ||
+              cardData.interestRate.balanceTransferRate) && (
+              <Section title="Interest Rates">
+                {cardData.interestRate.purchaseRate && (
+                  <InfoBlock
+                    title="Purchase Rate"
+                    value={cardData.interestRate.purchaseRate}
+                  />
+                )}
+                {cardData.interestRate.cashAdvanceRate && (
+                  <InfoBlock
+                    title="Cash Advance Rate"
+                    value={cardData.interestRate.cashAdvanceRate}
+                  />
+                )}
+                {cardData.interestRate.balanceTransferRate && (
+                  <InfoBlock
+                    title="Balance Transfer Rate"
+                    value={cardData.interestRate.balanceTransferRate}
+                  />
+                )}
+              </Section>
+            )}
 
-          {cardData.mainBenefits && (
+          {/* Rewards Program Section */}
+          {cardData.rewardsProgram &&
+            (cardData.rewardsProgram.program ||
+              cardData.rewardsProgram.earnRates?.regularSpending ||
+              cardData.rewardsProgram.redemptionOptions?.length) && (
+              <Section title="Rewards Program">
+                {cardData.rewardsProgram.program && (
+                  <InfoBlock
+                    title="Program"
+                    value={cardData.rewardsProgram.program}
+                  />
+                )}
+                {cardData.rewardsProgram.earnRates?.regularSpending && (
+                  <InfoBlock
+                    title="Earn Rate"
+                    value={cardData.rewardsProgram.earnRates.regularSpending}
+                  />
+                )}
+                {cardData.rewardsProgram.redemptionOptions &&
+                  cardData.rewardsProgram.redemptionOptions.length > 0 && (
+                    <div>
+                      <h4 className="text-sm font-medium text-gray-600">
+                        Redemption Options:
+                      </h4>
+                      <ul className="list-disc pl-5">
+                        {cardData.rewardsProgram.redemptionOptions.map(
+                          (option, index) => (
+                            <li key={index} className="text-gray-700">
+                              {option}
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    </div>
+                  )}
+              </Section>
+            )}
+          {/* Main Benefits Section */}
+          {cardData.mainBenefits && cardData.mainBenefits.length > 0 && (
             <Section title="Main Benefits">
               <ul className="list-disc pl-5 space-y-1">
                 {cardData.mainBenefits.map((benefit, index) => (

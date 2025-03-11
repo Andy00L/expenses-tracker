@@ -1,0 +1,45 @@
+2025-03-10 23:13:45,330 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.34:5000
+2025-03-10 23:13:45,330 INFO: [33mPress CTRL+C to quit[0m
+2025-03-10 23:15:15,099 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.34:5000
+2025-03-10 23:15:15,099 INFO: [33mPress CTRL+C to quit[0m
+2025-03-10 23:15:53,787 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.34:5000
+2025-03-10 23:15:53,794 INFO: [33mPress CTRL+C to quit[0m
+2025-03-10 23:16:10,078 INFO: 127.0.0.1 - - [10/Mar/2025 23:16:10] "OPTIONS /process HTTP/1.1" 200 -
+2025-03-10 23:16:18,853 INFO: 127.0.0.1 - - [10/Mar/2025 23:16:18] "[35m[1mPOST /process HTTP/1.1[0m" 500 -
+2025-03-10 23:17:48,477 INFO: 127.0.0.1 - - [10/Mar/2025 23:17:48] "OPTIONS /process HTTP/1.1" 200 -
+2025-03-10 23:17:55,920 INFO: 127.0.0.1 - - [10/Mar/2025 23:17:55] "[35m[1mPOST /process HTTP/1.1[0m" 500 -
+2025-03-10 23:20:23,661 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.34:5000
+2025-03-10 23:20:23,661 INFO: [33mPress CTRL+C to quit[0m
+2025-03-10 23:20:31,243 INFO: 127.0.0.1 - - [10/Mar/2025 23:20:31] "OPTIONS /process HTTP/1.1" 200 -
+2025-03-10 23:20:39,465 INFO: 127.0.0.1 - - [10/Mar/2025 23:20:39] "POST /process HTTP/1.1" 200 -
+2025-03-10 23:21:05,971 INFO: 127.0.0.1 - - [10/Mar/2025 23:21:05] "OPTIONS /process HTTP/1.1" 200 -
+2025-03-10 23:21:14,482 INFO: 127.0.0.1 - - [10/Mar/2025 23:21:14] "POST /process HTTP/1.1" 200 -
+2025-03-10 23:21:57,755 INFO: 127.0.0.1 - - [10/Mar/2025 23:21:57] "OPTIONS /process HTTP/1.1" 200 -
+2025-03-10 23:22:05,478 INFO: 127.0.0.1 - - [10/Mar/2025 23:22:05] "POST /process HTTP/1.1" 200 -
+2025-03-10 23:25:42,952 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.34:5000
+2025-03-10 23:25:42,953 INFO: [33mPress CTRL+C to quit[0m
+2025-03-10 23:25:46,485 INFO: 127.0.0.1 - - [10/Mar/2025 23:25:46] "OPTIONS /process HTTP/1.1" 200 -
+2025-03-10 23:25:54,406 INFO: 127.0.0.1 - - [10/Mar/2025 23:25:54] "POST /process HTTP/1.1" 200 -
+2025-03-10 23:26:44,375 INFO: 127.0.0.1 - - [10/Mar/2025 23:26:44] "OPTIONS /process HTTP/1.1" 200 -
+2025-03-10 23:26:52,614 INFO: 127.0.0.1 - - [10/Mar/2025 23:26:52] "POST /process HTTP/1.1" 200 -
+2025-03-10 23:58:43,911 INFO: 127.0.0.1 - - [10/Mar/2025 23:58:43] "OPTIONS /process HTTP/1.1" 200 -
+2025-03-10 23:58:51,952 INFO: 127.0.0.1 - - [10/Mar/2025 23:58:51] "POST /process HTTP/1.1" 200 -
+2025-03-10 23:59:20,629 INFO: 127.0.0.1 - - [10/Mar/2025 23:59:20] "OPTIONS /process HTTP/1.1" 200 -
+2025-03-10 23:59:28,510 INFO: 127.0.0.1 - - [10/Mar/2025 23:59:28] "POST /process HTTP/1.1" 200 -
+2025-03-11 00:01:59,112 INFO: 127.0.0.1 - - [11/Mar/2025 00:01:59] "OPTIONS /process HTTP/1.1" 200 -
+2025-03-11 00:03:58,035 INFO: 127.0.0.1 - - [11/Mar/2025 00:03:58] "POST /process HTTP/1.1" 200 -

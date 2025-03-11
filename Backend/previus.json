@@ -8,6 +8,10 @@
       "cashAdvanceRate": "21.99%",
       "balanceTransferRate": "null"
     },
+    "welcomeOffer": {
+      "bonusPoints": 60000,
+      "description": "Earn 60,000 Membership Rewards® points after spending $6,000 on eligible purchases in the first 6 months of Card Membership"
+    },
     "rewardsProgram": {
       "program": "Membership Rewards",
       "earnRates": {
@@ -27,10 +31,6 @@
       "Metal card design (Gold or Rose Gold)"
     ],
     "creditScoreRecommendation": "null",
-    "welcomeOffer": {
-      "bonusPoints": 60000,
-      "description": "Earn 60,000 Membership Rewards® points after spending $6,000 on eligible purchases in the first 6 months of Card Membership"
-    },
     "foreignTransactionFee": "None",
     "officialWebsite": "https://www.americanexpress.com/en-ca/credit-cards/gold-rewards-card/"
   }
